@@ -10,6 +10,6 @@ type Symbols struct {
 	reels *symbols.Reels
 }
 
-func (s *Symbols) Generate(rng RNG) (symbols.Symbols, error) {
+func (s *Symbols) Generate(rng RNG) (roundSymbols symbols.Symbols, err error) {
 	panic("implement me")
 }

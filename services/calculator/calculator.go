@@ -16,6 +16,6 @@ type Calculator struct {
 	payTable *paytable.PayTable
 }
 
-func (c *Calculator) Calculate(spinSymbols symbols.Symbols) ([]win.Win, error) {
+func (c *Calculator) Calculate(roundSymbols symbols.Symbols) ([]win.Win, error) {
 	panic("implement me")
 }
