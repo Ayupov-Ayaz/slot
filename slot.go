@@ -1,6 +1,7 @@
 package slot
 
 import (
+	"Ayupov-Ayaz/slot/internal/result"
 	"Ayupov-Ayaz/slot/internal/symbols"
 	"Ayupov-Ayaz/slot/internal/win"
 )
@@ -35,6 +36,6 @@ func NewSlot() *Slot {
 	return &Slot{}
 }
 
-func (s *Slot) Spin(rng RNG) ([]win.Win, error) {
+func (s *Slot) Spin(rng RNG) (*result.Round, error) {
 	panic("implement me")
 }
