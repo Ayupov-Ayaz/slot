@@ -7,7 +7,8 @@ type RNG interface {
 }
 
 type Symbols struct {
-	reels *symbols.Reels
+	rowsCount uint16
+	reels     *symbols.Reels
 }
 
 func (s *Symbols) Generate(rng RNG) (roundSymbols symbols.Symbols, err error) {

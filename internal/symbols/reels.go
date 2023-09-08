@@ -6,19 +6,13 @@ package symbols
 // Используется при генерации roundSymbols в services/generator/generator.go
 type Reels struct {
 	// read only
-	symbols Symbols
+	symbols []Symbols
 }
 
-func NewReels(symbols Symbols) *Reels {
+func NewReels(symbols []Symbols) *Reels {
 	return &Reels{symbols: symbols}
 }
 
-// ReadReels - read symbols from file
-func ReadReels() (*Reels, error) {
-	// обрати внимание, что в файле symbols.txt символы разделены через \t
-	// и что в конце каждой строки есть \n
-	// символ -1 нужен только для выравнивания таблицы
+func (r *Reels) GetSymbols(reelIndex int, startIndex int, count int) (Symbols, error) {
 	panic("implement me")
 }
-
-// todo: добавить функцию которая будет использоваться в services/generator/generator.go

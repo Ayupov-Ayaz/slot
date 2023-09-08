@@ -1,16 +1,13 @@
 package paytable
 
-import "embed"
+import "Ayupov-Ayaz/slot/internal/symbols"
 
-//go:embed pay_table.txt
-var paytable embed.FS
+type Payout []uint64
 
-type PayTable struct{}
+type PayTable struct {
+	symbolPayouts map[symbols.Symbol]Payout
+}
 
-func ReadPayTable() (*PayTable, error) {
-	panic("implement me")
-	// обрати внимание на то, что в файле pay_table.txt символы разделены через \t
-	// и что в конце каждой строки есть \n
-	// первая строка относится к таблице выплат символа - 1
-	// последняя строка относится к таблице выплат символа - 7
+func NewPayTable(symbolPayouts map[symbols.Symbol]Payout) *PayTable {
+	return &PayTable{symbolPayouts: symbolPayouts}
 }
