@@ -1,5 +1,7 @@
 package main
 
+const spinsCount = 20_000_00
+
 func run() error {
 	panic("implement me")
 }
