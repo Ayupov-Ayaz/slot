@@ -1,10 +1,10 @@
 package calculator
 
 import (
-	"Ayupov-Ayaz/slot/internal/lines"
-	"Ayupov-Ayaz/slot/internal/paytable"
-	"Ayupov-Ayaz/slot/internal/symbols"
-	"Ayupov-Ayaz/slot/internal/win"
+	"Ayupov-Ayaz/slot/internal/configs/lines"
+	"Ayupov-Ayaz/slot/internal/configs/paytable"
+	"Ayupov-Ayaz/slot/internal/configs/symbols"
+	"Ayupov-Ayaz/slot/internal/game/win"
 )
 
 // WILD - специальный символ, который может заменить любой другой символ
@@ -12,10 +12,15 @@ import (
 const WILD = symbols.Symbol(0)
 
 type Calculator struct {
-	lines    *lines.Lines
+	lines    lines.Lines
 	payTable *paytable.PayTable
 }
 
-func (c *Calculator) Calculate(roundSymbols symbols.Symbols) ([]win.Win, error) {
-	panic("implement me")
+func NewCalculator(lines lines.Lines, payTable *paytable.PayTable) *Calculator {
+	return &Calculator{lines: lines, payTable: payTable}
+}
+
+func (c *Calculator) Calculate(spinSymbols symbols.Reels) ([]win.Win, error) {
+	// todo: implement me
+	return nil, nil
 }

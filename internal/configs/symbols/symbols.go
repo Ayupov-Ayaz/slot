@@ -1,5 +1,7 @@
 package symbols
 
-type Symbol = uint16
+type Symbol = int
 
 type Symbols []Symbol
+
+type Reels []Symbols

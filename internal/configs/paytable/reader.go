@@ -1,8 +1,8 @@
 package paytable
 
 import (
-	"Ayupov-Ayaz/slot/internal/reader"
-	"Ayupov-Ayaz/slot/internal/symbols"
+	"Ayupov-Ayaz/slot/internal/configs/reader"
+	"Ayupov-Ayaz/slot/internal/configs/symbols"
 	"embed"
 	"fmt"
 )
@@ -11,6 +11,7 @@ import (
 var payTable embed.FS
 
 func parsePayouts(data [][]string) (map[symbols.Symbol]Payout, error) {
+	// todo: implement me
 	return nil, nil
 }
 
