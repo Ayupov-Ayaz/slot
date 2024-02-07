@@ -7,6 +7,8 @@ import (
 
 func TestReadLines(t *testing.T) {
 	// todo: implement me
-	_, err := ReadLines()
+	res, err := ReadLines()
 	require.NoError(t, err)
+	require.NotNil(t, res)
+	require.Equal(t, 5, len(res))
 }

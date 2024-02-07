@@ -1,16 +1,25 @@
 package generator
 
-import "Ayupov-Ayaz/slot/internal/symbols"
-
-type RNG interface {
-	Random(min uint32, max uint32) uint32
-}
+import (
+	"Ayupov-Ayaz/slot/internal/configs/symbols"
+	"Ayupov-Ayaz/slot/internal/rng"
+)
 
 type Symbols struct {
-	rowsCount uint16
-	reels     *symbols.Reels
+	rowsCount int
+	gameTapes []symbols.Symbols
 }
 
-func (s *Symbols) Generate(rng RNG) (roundSymbols symbols.Symbols, err error) {
-	panic("implement me")
+func NewSymbols(rowsCount int, gameTapes []symbols.Symbols) *Symbols {
+	return &Symbols{rowsCount: rowsCount, gameTapes: gameTapes}
+}
+
+func (s *Symbols) Generate(rng rng.RNG) (symbols.Reels, error) {
+	// todo: implement me
+	return nil, nil
+}
+
+func (s *Symbols) GetReelSymbols(reelIndex int, rowIndex int) symbols.Symbols {
+	// todo: implement me
+	return nil
 }
